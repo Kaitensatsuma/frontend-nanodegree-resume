@@ -2,36 +2,36 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
-    "name" : "Marcin Mazurek",
-    "role" : "Analyst",
-    "welcomeMessage" : "Welcome to my Portfolio",
-    "bioPic" : "images/me.jpg",
+    "name" : "PROMETHEUS | RESEARCH",
+    "role" : "",
+    "welcomeMessage" : "Research Data Management is Evolving",
+    "bioPic" : "images/prometheus.png",
     "contacts" : { 
-        "email" :"Marcin.Artur.Mazurek@gmail.com",
-        "mobile" : "203-736-7873",
-        "github" : "Kaitensatsuma",
-        "twitter" : "@Kaitensatsuma",
-        "location" : "Derby, Connecticut"
+        "email" :"contact@PrometheusResearch.com",
+        "mobile" : "+1.203.672.5800",
+        "bitbucket" : "Prometheus",
+        "twitter" : "prometheusrsrch",
+        "location" : "New Haven, Connecticut"
     },
     "skills" : [
-        "Analytics","Javascript","Client Projects"
+        "Research", "Analytics","Data Management","Client Projects"
     ]
 }
 
 var education = {
     "schools" : [
      {
-        "name": "Quinnipiac University",
-        "location" : "Hamden, Connecticut",
-        "degree":"Bachelor of Science",
+        "name": "",
+        "location" : "",
+        "degree":"",
         "majors" : ["International Business"],
         "dates" : 2014,
         "url" : "https://www.quinnipiac.edu"
      },
      {
-        "name" : "Quinnipaic Online",
-        "location" : "Hamden, Connecticut",
-        "degree":"Master of Science",
+        "name" : "",
+        "location" : "",
+        "degree":"",
         "major" : ["Business Analytics"],
         "dates" : 2017,
         "url" : "https://www.quinnipiac.edu"
@@ -61,25 +61,36 @@ var education = {
 var work = {
    "jobs" : [
    {
-       "employer":"Quinnipiac",
-       "title":"Pollster",
-       "location":"Hamden, Connecticut",
-       "dates": "2011",
-       "description":"Polling individuals across the country on important issues at inconvenient times of day"
+       "employer":"American Podiatric Medical Association",
+       "title":"",
+       "location":"Bethesda, Maryland",
+       "dates": "2017 - Ongoing",
+       "description":" ",
+       "url":"https://www.apma.org/"
    },
    {
-       "employer":"Sage Dining",
-       "title":"Dishwasher",
-       "location":"Cheshire, Connecticut",
-       "dates":"2012-2015",
-       "description":"Learning that you can always depend on people to be awful, and that as long as your manager is hired by the regional, he could murder someone and they probably still blame the staff"
+       "employer":"UC Irvine",
+       "title":"",
+       "location":"Irvine, California",
+       "dates": "2016 - Ongoing",
+       "description":" ",
+       "url":"https://uci.edu/"
    },
    {
-       "employer":"Prometheus Research",
-       "title":"Analyst I",
+       "employer":"Children's Hospital of Colorado",
+       "title":"",
+       "location":"Aurora, Colorado",
+       "dates":"2016 - Ongoing",
+       "description":" ",
+       "url":"https://www.childrenscolorado.org/"
+   },
+   {
+       "employer":"Yale University",
+       "title":"",
        "location":"New Haven, Connecticut",
-       "dates":"2016- Current",
-       "description":"Learning a lot about the research registry industry, YAML, Python Javascript and enjoying m work very much"
+       "dates":"2012 - Ongoing",
+       "description":" ",
+       "url":"https://www.yale.edu"
    }
    ]
 }
@@ -87,16 +98,34 @@ var work = {
 var projects = {
     "projects" : [
     {
-        "title": "Research Project: Investing into Israel",
-        "dates": "Jan 2012- March 2012",
-        "description": "A Look into the business investmen climate in Israel, focused more on Technological investment",
-        "images": ["images/flag.png"]
+        "title": "RexStudy",
+        "dates": "2011 -",
+        "description": "An Integrated research registry for managing all your human subject research data and research workflows in a single system",
+        "images":[""],
+        "url":"https://www.prometheusresearch.com/RexStudy/"
     },
     {
-        "title": "Research Project: How Culture impacts Economic Growth",
-        "dates":"Jan 2013 - Jan 2014",
-        "description":"Long Term Research project: Knowing about the different Cultural spectra, are there any correlations between particular cultural traits such as individualism or collectivism and economic development?",
-        "images": ["images/qu.png"]
+        "title": "Rex Registry",
+        "dates": "Feb 2017 -",
+        "description": "A data management platform for delivering tailored quality improvement performane benchmarking, disease and device specific patient registries",
+        "images": [""],
+        "url":"https://www.prometheusresearch.com/RexRegistry/"
+    },
+    {
+        "title": "Rex DB",
+        "dates":"Feb 2011 -",
+        "description":"A Library of tools for creating configurable data repositories with little-to-no help from programmers and database administrators",
+        "images": ["images/rexdb.png"],
+        "url":"https://www.prometheusresearch.com/rexdb/"
+
+    },
+    {
+        "title": "HTSQL",
+        "dates":"Feb 2011 -",
+        "description":"A comprehensive navigational query language for use with relational databases, made for both casual as well as advanced user needs",
+        "images": ["images/rabbit.png"],
+        "url":"http://htsql.org/"
+
     }
     ]
 }
@@ -138,13 +167,18 @@ bio.displaySkills = function(){
     $('#header').append(HTMLheaderName.replace("%data%", bio.name));
     $('#header').append(HTMLheaderRole.replace("%data%", bio.role));
     $('#header').append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
-    $('#header').append(HTMLbioPic.replace("%data%", bio.bioPic));
-    $('#header').append(HTMLskillsStart);
     $('#topContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
     $('#topContacts').append(HTMLmobile.replace("%data%", bio.contacts.mobile));
     $('#topContacts').append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
     $('#topContacts').append(HTMLlocation.replace("%data%", bio.contacts.location));
-    $('#topContacts').append(HTMLgithub.replace("%data%", bio.contacts.github));
+    $('#topContacts').append(HTMLbitbucket.replace("%data%", bio.contacts.bitbucket));
+    $('#footerContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
+    $('#footerContacts').append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+    $('#footerContacts').append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+    $('#footerContacts').append(HTMLlocation.replace("%data%", bio.contacts.location));
+    $('#footerContacts').append(HTMLbitbucket.replace("%data%", bio.contacts.bitbucket));
+    $('#header').append(HTMLbioPic.replace("%data%", bio.bioPic));
+    $('#header').append(HTMLskillsStart);
     for(var i = 0; i < bio.skills.length; i++){
         $('#skills').append(HTMLskills.replace("%data%", bio.skills[i]));
     }
@@ -154,7 +188,8 @@ bio.displaySkills = function(){
 projects.displayProjects = function(){
     for(var i = 0; i < projects.projects.length; i++){
         $('#projects').append(HTMLprojectStart);
-        $('.project-entry:last').append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
+        $('.project-entry:last').append(HTMLprojectTitle.replace("%data%", projects.projects[i].title)
+                .replace("#",projects.projects[i].url));
         $('.project-entry:last').append(HTMLprojectStart.replace("%data%", projects.projects[i].date));
         $('.project-entry:last').append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
         $('.project-entry:last').append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
@@ -165,7 +200,8 @@ work.displayWork = function(){
         for (job in work.jobs){
             $("#workExperience").append(HTMLworkStart);
             
-            var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer); 
+            var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer)
+                .replace("#",work.jobs[job].url); 
             var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
             var formattedEmployerTitle = formattedEmployer + formattedTitle;
             var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
